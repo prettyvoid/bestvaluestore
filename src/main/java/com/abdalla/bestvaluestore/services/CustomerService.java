@@ -22,7 +22,8 @@ public class CustomerService {
     private final GroceriesRepository groceriesRepository;
     private final ElectronicsRepository electronicsRepository;
 
-    public CustomerService(CustomerRepository customerRepository, GroceriesRepository groceriesRepository, ElectronicsRepository electronicsRepository) {
+    public CustomerService(CustomerRepository customerRepository, GroceriesRepository groceriesRepository,
+                           ElectronicsRepository electronicsRepository) {
         this.customerRepository = customerRepository;
         this.groceriesRepository = groceriesRepository;
         this.electronicsRepository = electronicsRepository;

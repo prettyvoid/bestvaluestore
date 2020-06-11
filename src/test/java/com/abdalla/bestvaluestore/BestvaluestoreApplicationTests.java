@@ -7,13 +7,10 @@ import com.abdalla.bestvaluestore.models.Customer;
 import com.abdalla.bestvaluestore.models.ElectronicDevice;
 import com.abdalla.bestvaluestore.models.Grocery;
 import com.abdalla.bestvaluestore.services.CustomerService;
-import org.junit.Before;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -25,7 +22,6 @@ import static org.mockito.Mockito.when;
 
 @SpringBootTest
 class BestvaluestoreApplicationTests {
-//
     @Mock
     private CustomerRepository customerRepository;
     @Mock
@@ -57,5 +53,4 @@ class BestvaluestoreApplicationTests {
         when(electronicsRepository.findById(3L)).thenReturn(Optional.of(electronicDevice3));
         assertEquals(new BigDecimal("573.00"), customerService.calculatePrice(1L, List.of(1L,2L,3L), List.of(1L,2L)));
     }
-
 }
