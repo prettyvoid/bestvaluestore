@@ -20,7 +20,7 @@ public class MainController {
 
     @PostMapping("/calculate_price")
     ResponseEntity<BigDecimal> calculatePrice(@RequestParam Long customerId, @RequestParam List<Long> groceryIds,
-                                          @RequestParam List<Long> electronicDevicesIds) {
+                                              @RequestParam List<Long> electronicDevicesIds) {
         BigDecimal bigDecimal = customerService.calculatePrice(customerId, groceryIds, electronicDevicesIds);
         return new ResponseEntity<>(bigDecimal, HttpStatus.OK);
     }
